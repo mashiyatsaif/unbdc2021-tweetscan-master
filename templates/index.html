@@ -14,16 +14,17 @@
             <h1>Fake or Fact?</h1>
         </div>
         <div class="intro">
-            <p><span id="first">F</span>ake news is composed of fabricated statements which circulate online universally through social networking sites such as Twitter, Weibo, Facebook and more. Ever since the Coronavirus disease 2019 (COVID-19) pandemic started early 2020, there has been fake news circulating all over social networks which need identification and detection. 
-                The misinformation that has been accessible worldwide during the pandemic varied in different regions, but one has been global: anti-vaccine misinformation. The conspiracy theories, alternative untested treatments, anti-lockdown sentiments and other wide range of misleading statements on social media have increased the spread of misinformation and vaccine hesitancy. 
+            <p><span id="first">F</span>ake news is composed of fabricated statements which circulate online universally through social networking sites such as Twitter, Weibo, Facebook and more. Ever since the Coronavirus disease 2019 (COVID-19) pandemic started early 2020, there has been fake news circulating all over social networks which need identification and detection. <br>
+                The misinformation that has been accessible worldwide during the pandemic varied in different regions, but one has been global: anti-vaccine misinformation. The conspiracy theories, alternative untested treatments, anti-lockdown sentiments and other wide range of misleading statements on social media have increased the spread of misinformation and vaccine hesitancy.<br>
+                <P>
                 To help stop the circulation of Fake News on the internet, We applied certain machine learning (ML), deep learning (DL) and transformer based ML models on the data set and observed how accurately the models classified the data as well as identify the best classification model of COVID-19 fake news from tweets. </p>
         </div>
         <h1 id="subtitle">Test your Tweet!</h1>
         <div class="input">
             <form action="{{url_for('predict')}}" method="post">
-                <img id="headtw" src="../static/TweetHeader.png">
+                <img id="headtw" src="../static/TwitterHeader.PNG">
                 <textarea id="tweetinput" name="tweetinput" rows="12" cols="40" required="required">Copy and paste the text of your tweet here!</textarea><br>
-                <img id="bottw" src="../static/tweetbot.png"><br>
+                <img id="bottw" src="../static/tweetbot.PNG"><br>
                 <button type="submit">Predict</button>
             </form>
         </div>
