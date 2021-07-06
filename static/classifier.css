@@ -5,11 +5,6 @@ html {
 
 }
 
-#greenbird, #redbird{
-    max-width: 70px;
-    height:auto;
-    padding: 20px;
-}
 
 #greenbird{
     -webkit-transform: scaleX(-1);
@@ -37,6 +32,14 @@ body {
 .button{
     border: 3px solid white;
 }
+
+#h2{ font-family: 'Arvo', serif;
+    font-size: 30px;
+    justify-content: center;}
+.button{
+    border: 3px solid white;
+}
+
 .intro {
     background-color: #E1E8ED;
     padding: 20px;
