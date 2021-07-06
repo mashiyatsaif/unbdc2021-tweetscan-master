@@ -1,0 +1,83 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("Twitter-FeatureArt.jpg");
+
+
+}
+
+#greenbird, #redbird{
+    max-width: 70px;
+    height:auto;
+    padding: 20px;
+}
+
+#greenbird{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.banner{
+    font-family: 'Arvo', serif;
+    display:flex;
+    justify-content: center;
+
+}
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.button{
+    border: 3px solid white;
+}
+.intro {
+    background-color: #E1E8ED;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+}
+.result {
+    text-align: center;
+    display: none;
+    padding: 20px;
+}
+
+#headtw, #bottw{
+    width:60%;
+}
+
+.submission {
+    padding-bottom: 10px;
+}
+
+textarea{
+    border:none;
+}
+
+table, td, th{
+    border: 2px solid black;
+    background-color: lightcyan;
+}
+
+td{
+    padding: 10px;
+}
+table{
+    margin: auto;
+}
+
+footer{
+    background-color: #657786;
+    margin-top: auto;
+    padding: 10px;
+    display: flex;
+    color: white;
+
+}

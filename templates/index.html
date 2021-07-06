@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fake News Classifier</title>
+        <link href="../static/classifier.css" type="text/css" rel="stylesheet">
+        <!-- <script src="haha.js"></script> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,100;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="banner">
+            <img id="redbird" src="../static/Tweetred.png">
+            <h1>Fake or Fact?</h1>
+            <img id="greenbird" src="../static/Tweetgreen.png">
+        </div>
+        <div class="intro">
+            <img src="../static/fake news.jpg">
+            <p><span id="first">F</span>ake news is composed of fabricated statements which circulate online universally without any confirmation through social networking sites such as Twitter, Weibo, Facebook and more. Ever since the Coronavirus disease 2019 (COVID-19) pandemic started early 2020, there has been fake news circulating all over social networks which need identification and detection. 
+                The misinformation that has been accessible worldwide during the pandemic varied in different regions, but one has been global: anti-vaccine misinformation. The conspiracy theories, alternative untested treatments, anti-lockdown sentiments and other wide range of misleading statements on social media have increased the spread of misinformation. 
+                To help stop the circulation of Fake News on the internet, We applied certain machine learning (ML), deep learning (DL) and transformer based ML models on the data set and observed how accurately the models classified the data as well as identify the best classification model of COVID-19 fake news from tweets. </p>
+        </div>
+        <h1 id="subtitle">Test your Tweet!</h1>
+        <div class="input">
+            <form action="{{url_for('predict')}}" method="post">
+                <img id="headtw" src="../static/TweetHeader.png">
+                <textarea id="tweetinput" name="tweetinput" rows="12" cols="40" required="required">Copy and paste the text of your tweet here!</textarea><br>
+                <img id="bottw" src="../static/tweetbot.png"><br>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+        <br>
+
+        {{ prediction_text }}
+
+        <br>
+        <br>
+        <div id="result">
+            <p>Here are some statistics on our models!:</p>
+            <table>
+                <tr>
+                    <td>Model</td>
+                    <td>Accuracy</td>
+                    <td>Precision</td>
+                    <td>Recall</td>
+                    <td>F1 Score</td>
+                </tr>
+                <tr>
+                    <td>Multinomial NB</td>
+                    <td>0.97</td>
+                    <td>0.82</td>
+                    <td>0.56</td>
+                    <td>0.68</td>
+                </tr>
+                <tr>
+                    <td>Complement NB</td>
+                    <td>0.87</td>
+                    <td>0.26</td>
+                    <td>0.73</td>
+                    <td>0.38</td>
+                </tr>
+                <tr>
+                    <td>Logistic</td>
+                    <td>0.97</td>
+                    <td>0.93</td>
+                    <td>0.43</td>
+                    <td>0.59</td>
+                </tr>
+                <tr>
+                    <td>KNN</td>
+                    <td>0.95</td>
+                    <td>0.52</td>
+                    <td>0.74</td>
+                    <td>0.62</td>
+                </tr>
+                <tr>
+                    <td>Kernel SVM</td>
+                    <td>0.99</td>
+                    <td>0.91</td>
+                    <td>0.80</td>
+                    <td>0.85</td>
+                </tr>
+                <tr>
+                    <td>RF</td>
+                    <td>0.99</td>
+                    <td>0.97</td>
+                    <td>0.78</td>
+                    <td>0.87</td>
+                </tr>
+                <tr>
+                    <td>DNN</td>
+                    <td>0.98</td>
+                    <td>0.93</td>
+                    <td>0.77</td>
+                    <td>0.84</td>
+                </tr>
+                <tr>
+                    <td>BERT</td>
+                    <td>0.98</td>
+                    <td>0.88</td>
+                    <td>0.77</td>
+                    <td>0.82</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- <script>
+            function myFunction() {
+              var x = document.getElementById("result");
+              x.style.display = "block";
+            }
+         </script> -->
+    </body>
+    <footer>
+        <p id="event">Undergraduate Big Data Challenge 2021 - Team 89</p>
+    </footer>
+    
+</html>
